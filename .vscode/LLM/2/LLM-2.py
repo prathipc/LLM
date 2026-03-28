@@ -36,3 +36,15 @@ preprocessed = [item.strip() for item in preprocessed if item.strip()]
 
 # Print the final cleaned token list.
 print(preprocessed[:30])
+
+all_words = sorted(set(preprocessed))
+vocab_size = len(all_words)
+print(vocab_size)
+print(all_words[:30])
+
+vocab = {token:integer for integer,token in enumerate(all_words)}
+
+for i, item in enumerate(vocab.items()):
+    print(item)
+    if i >= 100:
+        break
